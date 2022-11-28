@@ -1,6 +1,6 @@
 {
     "name": "xq-java-script-framework",
-    "version": "1.0.0",
+    "version": "1.0.8",
     "description": "type script framework",
     "main": "index.js",
     "types": "./index.js",
@@ -28,6 +28,7 @@
         "date",
         "string",
         "object",
+        "number",
         "index.js",
         "typings.json"
     ]

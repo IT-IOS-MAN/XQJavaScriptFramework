@@ -6,8 +6,8 @@
 //  Copyright © 2020 IT_IOS_MAN. All rights reserved.
 //
 
-/// <reference path="./guid.js" />
-/// <reference path="./path.js" />
-/// <reference path="./judge.js" />
-/// <reference path="./space.js" />
-/// <reference path="./random.js" />
+import "./guid.js"
+import "./path.js"
+import "./judge.js"
+import "./space.js"
+import "./random.js"

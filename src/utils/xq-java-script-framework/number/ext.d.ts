@@ -6,5 +6,11 @@
 //  Copyright © 2020 IT_IOS_MAN. All rights reserved.
 //
 
-import "./constructor.js"
-import "./format.js"
+/// <reference path="../object/ext.d.ts" /> 
+
+/**
+ * 类 扩展工具类
+ */
+interface Number extends Object {
+
+}

@@ -11,14 +11,11 @@
 
 
 /**
- * XQTypeScriptFramework 
+ * XQJavaScriptFramework 
  */
-// import "./object/index.d.ts"    // 类 工具类
-// import "./string/index.d.ts"    // 字符串 工具类
-// import "./array/ext.d.ts"     // 数组 工具类
-// import "./date/index.d.ts"      // 日期 工具类
 
-/// <reference path="./object/index.js" />
-/// <reference path="./string/index.js" />
-/// <reference path="./array/ext.d.ts" />
-/// <reference path="./date/index.js" />
+import "./object/index.js"
+import "./string/index.js"
+import "./array/index.js"
+import "./date/index.js"
+import "./number/index.js"
