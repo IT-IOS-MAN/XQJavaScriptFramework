@@ -9,6 +9,23 @@
 /// <reference path="../object/ext.d.ts" /> 
 
 /**
+* 字符串 扩展工具类 (基础工具类)
+*/
+interface String {
+    /**
+     * 字符串是否为空 null | []
+     * @param obj 
+     */
+    xq_isEmpty(): boolean;
+
+    /**
+    * 字符串是否不为空 null | []
+    * @param obj 
+    */
+    xq_isNotEmpty(): boolean;
+}
+
+/**
  *  字符串 扩展工具类 (唯一标识工具类)
  */
 interface String extends Object {

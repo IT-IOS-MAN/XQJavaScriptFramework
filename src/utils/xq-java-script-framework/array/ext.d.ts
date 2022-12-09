@@ -15,12 +15,12 @@ interface Array<T> extends Object {
     /**
      * 获取第一个元素
      */
-    xq_firstElement(): T | undefined;
+    readonly xq_firstElement: T | undefined;
 
     /**
      * 获取最后一个元素
      */
-    xq_lastElement(): T | undefined;
+    readonly xq_lastElement: T | undefined;
 
     /**
      * 添加一个元素
@@ -76,4 +76,17 @@ interface Array<T> extends Object {
      * 清除数组
      */
     xq_clean(): void;
+
+    /**
+     * 数组是否为空 null | []
+     * @param obj 
+     */
+    xq_isEmpty(): boolean;
+
+    /**
+    * 数组是否不为空 null | []
+    * @param obj 
+    */
+    xq_isNotEmpty(): boolean;
+
 } 

@@ -15,6 +15,7 @@ npm install xq-java-script-framework
 ```
 import "xq-java-script-framework"
 ```
+
 ### 扩展汇总
 ---
 - **Array**
@@ -31,7 +32,7 @@ import "xq-java-script-framework"
 // 判断是否为空
 "XQFramework".xq_isNull(); // false
 // 获取第一个对象
-["iOS", "Android"].xq_firstElement(); // "iOS"
+["iOS", "Android"].xq_firstElement; // "iOS"
 // 获得纯文件名，带后缀
 "https://avatars.githubusercontent.com/u/22712251.png".xq_lastPathComponent(); // 22712251.png
 ```
@@ -45,14 +46,14 @@ import "xq-java-script-framework"
 interface Array< T > {
 
   /**
-   * 获取第一个元素
-   */
-  xq_firstElement(): T | undefined;
+    * 获取第一个元素
+    */
+  readonly xq_firstElement: T | undefined;
 
   /**
-   * 获取最后一个元素
-   */
-  xq_lastElement(): T | undefined;
+    * 获取最后一个元素
+    */
+  readonly xq_lastElement: T | undefined;
 
   /**
    * 添加一个元素
@@ -108,6 +109,18 @@ interface Array< T > {
    * 清除数组
    */
   xq_clean(): void;
+
+  /**
+    * 数组是否为空 null | []
+    * @param obj 
+    */
+    xq_isEmpty(): boolean;
+
+    /**
+    * 数组是否不为空 null | []
+    * @param obj 
+    */
+    xq_isNotEmpty(): boolean;
 }
 ```
 
@@ -179,6 +192,26 @@ interface Object {
 }
 ```
 - String 扩展方法
+
+```
+/**
+* 字符串 扩展工具类 (基础工具类)
+*/
+interface String {
+    /**
+     * 字符串是否为空 null | []
+     * @param obj 
+     */
+    xq_isEmpty(): boolean;
+
+    /**
+    * 字符串是否不为空 null | []
+    * @param obj 
+    */
+    xq_isNotEmpty(): boolean;
+}
+```
+
 ```
 /**
  *  扩展工具类

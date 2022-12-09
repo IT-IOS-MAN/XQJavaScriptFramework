@@ -8,15 +8,21 @@
 
 /// <reference path="./ext.d.ts" /> 
 
-Array.prototype.xq_firstElement = function () {
-  if (this.xq_isNull()) return undefined;
-  return this[0];
-}
+Object.defineProperty(Array.prototype, "xq_firstElement", {
 
-Array.prototype.xq_lastElement = function () {
-  if (this.xq_isNull()) return undefined;
-  return this[this.length - 1];
-}
+  get() {
+    if (this.xq_isNull()) return undefined;
+    return this[0];
+  },
+});
+
+Object.defineProperty(Array.prototype, "xq_lastElement", {
+
+  get() {
+    if (this.xq_isNull()) return undefined;
+    return this[this.length - 1];
+  },
+});
 
 Array.prototype.xq_addElement = function (obj) {
   if (this.xq_isNull() || obj.xq_isNull()) return;
@@ -43,7 +49,7 @@ Array.prototype.xq_removeElement = function (obj) {
   this.splice(this.xq_indexOfElement(obj), 1);
 }
 
-Array.prototype.xq_removeElementAtIndex = function () {
+Array.prototype.xq_removeElementAtIndex = function (index) {
   if (this.xq_isNull()) return;
   this.splice(index, 1);
 }
@@ -58,7 +64,15 @@ Array.prototype.xq_containsObject = function (obj) {
   return this.indexOf(obj) >= 0;
 }
 
-Array.prototype.xq_clean = function() {
+Array.prototype.xq_clean = function () {
   if (this.xq_isNull()) return;
   this.length = 0;
+}
+
+Array.prototype.xq_isEmpty = function () {
+  return this.xq_isNull() && this.length == 0;
+}
+
+Array.prototype.xq_isNotEmpty = function () {
+  return !this.xq_isEmpty();
 }

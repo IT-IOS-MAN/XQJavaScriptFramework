@@ -6,6 +6,7 @@
 //  Copyright © 2020 IT_IOS_MAN. All rights reserved.
 //
 
+import "./constructor.js"
 import "./guid.js"
 import "./path.js"
 import "./judge.js"
