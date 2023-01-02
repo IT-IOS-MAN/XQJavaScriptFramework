@@ -1,6 +1,6 @@
 {
     "name": "xq-java-script-framework",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "type script framework",
     "main": "index.js",
     "types": "./index.js",

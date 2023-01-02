@@ -31,7 +31,9 @@ Array.prototype.xq_addElement = function (obj) {
 
 Array.prototype.xq_addElements = function (objs) {
   if (this.xq_isNull() || objs.xq_isNull()) return;
-  this.push(objs);
+  objs.forEach((obj) => {
+    this.push(obj);
+  })
 }
 
 Array.prototype.xq_insertElement = function (obj, index) {
